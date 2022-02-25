@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="user_posts">
+    {% if user_posts|length > 0 %}
+    <div class="user_posts__posted_review">
+        {% for item in user_posts %}
+                {% include 'review.html' %}
+        {% endfor %}
+        <h2>Vos critiques</h2>
+    </div>
+    {% elif user_tickets|length > 0 %}
+    <div class="user_posts__posted_ticket">
+        {% for item in user_tickets %}
+            {% if not item.rated %}
+                {% include 'ticket_unrated.html' %}
+            {% else %}
+                {% include 'ticket.html' %}
+            {% endif %}
+        {% endfor %}
+        <h2>Vos demandes de critiques</h2>
+        </div>
+        </div>
+    {% else %}
+        <h1><strong>Oups .. vous n'avez encore rien publié !</strong></h1>
+    {% endif %}
+    </div>
+{% endblock content %}

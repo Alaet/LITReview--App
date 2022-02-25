@@ -1,0 +1,9 @@
+<div class="ticket">
+    <p> {{ item.ticket.user }} a demandé une critique <br>
+    {{ item.ticket.title }} <br>
+    {{ item.ticket.description }}
+        {% if item.ticket.image %}
+            <img src="{{ item.ticket.image.url }}">
+        {% endif %}
+    </p>
+</div>

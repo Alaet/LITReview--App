@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Modifier votre critique</h2>
+    {% include 'ticket.html' %}
+    <section class="form">
+        {% if form.errors %}
+            {{ form.errors }}
+        {% endif %}
+        <form method="post" enctype=multipart/form-data>
+            {% csrf_token %}
+            {{ edit_form.as_p }}
+            <button type="submit" >Sauvegarder</button>
+        </form>
+    </section>
+{% endblock content %}

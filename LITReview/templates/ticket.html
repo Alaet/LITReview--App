@@ -1,0 +1,14 @@
+<div class="ticket">
+    <p> {{ item.user }} a demandé une critique <br>
+    {{ item.title }} <br>
+    {{ item.description }}
+        {% if item.image %}
+            <img src="{{ item.image.url }}">
+        {% endif %}
+    {% if item.user == request.user %}
+        <button><a href="{% url 'edit-ticket' item.id %}">Modifier mon ticket</a></button>
+        <button class="delete_post"
+        ><a href="{% url 'delete-ticket' item.id %}">Supprimer mon ticket</a></button>
+    {% endif %}
+    </p>
+</div>

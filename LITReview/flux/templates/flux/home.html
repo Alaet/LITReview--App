@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div id="flux_home">
+    <h2>Bonjour, vous etes connecté en tant que </h2>
+    <h1> {{ request.user }} </h1>
+    <div id="flux_home__button">
+        <button>
+            <a href="{% url 'post-ticket' %}">Demander une critique</a>
+        </button>
+        <button class="flux_home__button-create_post">
+            <a href="{% url 'add-new-review' %}">Créer une ctritique</a>
+        </button>
+    </div>
+    {% if posts|length > 0 %}
+    {% for item in posts %}
+         {% if item.content_type == 'TICKET' %}
+                {% include 'ticket_unrated.html' %}
+        {% elif item.content_type == 'REVIEW' %}
+                {% include 'review_flux.html' %}
+        {% endif %}
+    {% endfor %}
+    {% else %}
+        <h1><strong>Oups .. vous n'avez encore rien publié,<br> OU ne suivez aucun utilisateur,<br> abonnez-vous à
+            quelqu'un pour suivre son activité !</strong></h1>
+    {% endif %}
+    </div>
+{% endblock content %}

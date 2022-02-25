@@ -1,0 +1,256 @@
+@mixin flex ($display, $direction, $align-items, $justify-content) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content; 
+}
+
+@mixin forms {
+    p {
+        @include flex(flex, column, none, space-evenly);
+        a {
+            @include flex(flex, none, none, space-evenly);
+        }
+    } 
+}
+
+@mixin base_ticket {
+    background-color: #6EBF8B;
+    @extend %posts_box;
+    img {
+        max-width: 20%;
+        border-radius: 15px;
+    }
+}
+
+%posts_box {
+    border: 5px solid #DFF6FF;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    button {
+        background-color: greenyellow;
+    }
+    .delete_post {
+        background-color: rgba(255, 0, 0, 0.616);
+    }
+}
+
+body {
+    background: #FDEFF4;
+    color: black;
+    height: 50%;
+}
+
+input, h2, h1 {
+    text-align:center;
+}
+
+button {
+    border-radius: 15px;
+}
+
+p > #id_content{
+    display: flex;
+    width: 75%;
+}
+
+.user_posts {
+    @include flex(flex, row, center, none);
+    flex-wrap: wrap;
+    &__posted_ticket, &__posted_review {
+        @include flex(flex, column-reverse, center, none);
+    }
+}
+
+.review {
+    @include flex(flex, row, none, space-between);
+    @extend %posts_box;
+    background-color: #D82148;
+    flex-wrap: wrap;
+    width: 80%;
+    p {
+        word-break: break-all;
+        white-space: normal;
+    }
+    > div {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__creation {
+        @include flex(flex, column, flex-end, space-between);
+        flex-wrap: wrap;
+        height: auto;
+        width: 20%;
+    }
+    .ticket {
+        margin-right: 15px;
+        margin-left: 0.5%;
+        justify-content: left;
+        width: 100%;
+    }
+}
+
+.ticket_unrated {
+    @include flex(flex, row, flex-start, space-between);
+    @include base_ticket();
+    width: 80%;
+    .create_post {
+        background-color: white;
+        border-radius: 15px;
+    }
+    p {
+        @include flex(flex, column, stretch, none);
+        height: 90%;
+    }
+}
+
+.ticket {
+    @include flex(flex, row, center, none);
+    @include base_ticket;
+    width: 80%;
+    img {
+        max-width: 40%;
+    }
+    p {
+        @include flex(flex, column, stretch, none);
+        height: 90%;
+    }
+}
+
+.header {
+    @include flex(flex, column, center, none);
+}
+
+#id_rating {
+    @include flex(flex, row, center, none);
+}
+
+#flux_home {
+    @include flex(flex, column, center, space-evenly);
+    &__button {
+        > button {
+            margin-top: 15px;
+            font-size: 18px;
+            padding: 16px 32px;
+        }
+    }
+}
+
+#home_nav_bar {
+    @include flex(flex, row, center, space-around);
+    width: 100%;
+    nav {
+        position: relative;
+        margin-left: auto;
+        padding-right: 55px;
+    }
+    a {
+        padding-left: 55px;
+        width: 100%;     
+        &:link {
+            color: red;
+        }
+    }
+}
+
+.post {
+    @include flex(flex, row, center, none);
+    img {
+        border: 1px transparent hsla(0, 100%, 50%, 0.521);
+        border-radius: 10%;
+        padding: 2px;
+        width: 150px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.flux {
+    @include flex(flex, row, center, none);
+    a{
+        @include flex(flex, column-reverse, center, space-evenly);
+    }
+}
+
+.photo_feed_row {
+    @include flex(flex, row, center, space-evenly);
+    margin: auto;
+    margin-top: 50px;
+    width: 75%;
+    h2.flux_title {
+        position: relative;
+        bottom: 185px;
+        left: 48%;
+    }  
+}
+
+.photo_feed {
+    @include flex(flex, column, center, none);
+    margin: auto;
+    margin-top: 50px;
+    margin-left: auto;
+    padding-top: 5px;
+    img {
+        border: 1px transparent hsla(0, 100%, 50%, 0.521);
+        border-radius: 10%;
+        padding: 2px;
+        width: 150px;
+        box-shadow: -5px 15px rgba(0, 0, 0, 0.521);
+    }
+}
+
+.delete_form, form {
+    @include flex(flex, column, center, none);
+}
+
+.avatar {
+    width: 75px;
+    position: absolute;
+    top: 0%;
+    border-radius: 80%;
+}
+
+.logout
+{
+    @include flex(flex, column, center, none)
+}
+
+.login_form_home {
+    @include flex(flex, row-reverse, center, space-around);
+    @include forms();
+    .signup {
+        display: flex;
+        margin-right: 10%;
+        p {
+            @include flex(flex, column, none, space-evenly);
+            width: auto;
+            a {
+                @include flex(flex, none, none, space-evenly);
+            }
+        }
+    }
+}
+
+.form {
+    @include forms();
+    #id_body {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+}
+
+.follow {
+    @include flex(flex, column, center, center);
+    width: 100%;
+    .following, .follower{
+        @include flex(flex, column, center, none);
+        width: 100%;
+    }
+}
