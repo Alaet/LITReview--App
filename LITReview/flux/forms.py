@@ -13,11 +13,11 @@ class ReviewForm(forms.ModelForm):
         ('5', '5 ⭐'),
     ]
     edit_review = forms.BooleanField(widget=forms.HiddenInput, initial=True)
-    rating = forms.ChoiceField(widget=forms.RadioSelect, choices=STARS)
+    note = forms.ChoiceField(widget=forms.RadioSelect, choices=STARS)
 
     class Meta:
         model = models.Review
-        fields = ['headline', 'rating', 'body']
+        fields = ['headline', 'note', 'body']
 
 
 class DeleteReviewForm(forms.Form):
