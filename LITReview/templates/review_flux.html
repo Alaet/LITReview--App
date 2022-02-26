@@ -1,39 +1,44 @@
 <div class="container">
-<div class="jumbotron bg-transparent">
-<div class="review m-auto">
-    <div>
-        <p> {{ item.user }} a publié une critique <br><br>
-         {{ item.headline }} -
-            {% if item.rating == 0 %}
-                <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
-                <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
-                <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
-                <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
-                <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
-            {% elif item.rating == 1  %}
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&#x2605;</span>
-            {% elif item.rating == 2  %}
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-            {% elif item.rating == 3  %}
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-            {% elif item.rating == 4  %}
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-            {% elif item.rating == 5  %}
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-            {% endif %}
-            <br><br> {{ item.body }} </p></div>
-        <div class="review__creation"><p> {{ item.time_created }} </p></div>
-       <div class="container w-auto">{% include 'ticket_review_flux.html' %}</div>
-</div>
-</div>
+    <div class="jumbotron bg-transparent">
+        <div class="review m-auto">
+            <div>
+                <p> {{ item.user }} a publié une critique <br><br>
+                 {{ item.headline }} -
+                    {% if item.rating == 0 %}
+                        <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
+                        <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
+                        <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
+                        <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
+                        <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
+                    {% elif item.rating == 1  %}
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&#x2605;</span>
+                    {% elif item.rating == 2  %}
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                    {% elif item.rating == 3  %}
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                    {% elif item.rating == 4  %}
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                    {% elif item.rating == 5  %}
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                    {% endif %}
+                    <br><br> {{ item.body }} </p>
+            </div>
+            <div class="review__creation">
+                <p> {{ item.time_created }} </p>
+            </div>
+            <div class="container w-auto">
+                {% include 'ticket_review_flux.html' %}
+            </div>
+        </div>
+    </div>
 </div>

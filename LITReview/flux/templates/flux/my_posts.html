@@ -2,27 +2,26 @@
 {% block content %}
 <div class="container m-auto d-flex flex-column align-items-center justify-content-center">
     {% if user_posts|length > 0 %}
-    <div class="posted_review">
-        {% for item in user_posts %}
-                {% include 'review.html' %}
-        {% endfor %}
-        <h2>Vos critiques</h2>
-    </div>
+        <div class="posted_review">
+            {% for item in user_posts %}
+                    {% include 'review.html' %}
+            {% endfor %}
+            <h2>Vos critiques</h2>
+        </div>
     {% endif %}
     {% if user_tickets|length > 0 %}
-    <div class="posted_ticket">
-        {% for item in user_tickets %}
-            {% if not item.rated %}
-                {% include 'ticket_unrated.html' %}
-            {% else %}
-                {% include 'ticket.html' %}
-            {% endif %}
-        {% endfor %}
-        <h2>Vos demandes de critiques</h2>
-        </div>
+        <div class="posted_ticket">
+            {% for item in user_tickets %}
+                {% if not item.rated %}
+                    {% include 'ticket_unrated.html' %}
+                {% else %}
+                    {% include 'ticket.html' %}
+                {% endif %}
+            {% endfor %}
+            <h2>Vos demandes de critiques</h2>
         </div>
     {% else %}
         <h1><strong>Oups .. vous n'avez encore rien publié !</strong></h1>
     {% endif %}
-    </div>
+</div>
 {% endblock content %}

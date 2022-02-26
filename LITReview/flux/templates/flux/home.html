@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="jumbotron bg-transparent d-flex flex-column">
+<div class="jumbotron bg-transparent d-flex flex-column">
     <h2>Bonjour, vous etes connecté en tant que </h2>
     <h1> {{ request.user }} </h1>
     <div id="flux_home__button">
@@ -23,5 +23,5 @@
         <h1><strong>Oups .. vous n'avez encore rien publié,<br> OU ne suivez aucun utilisateur,<br> abonnez-vous à
             quelqu'un pour suivre son activité !</strong></h1>
     {% endif %}
-    </div>
+</div>
 {% endblock content %}

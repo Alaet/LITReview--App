@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Créer un critique </h2>
-    <section class="form">
-        {% if form.errors %}
-            {{ form.errors }}
-        {% endif %}
-        <form method="post" enctype=multipart/form-data>
-            {% csrf_token %}
-            {{ ticket_form.as_p }}
-            {{ review_form.as_p }}
-            <button type="submit" >Soumettre</button>
-        </form>
-    </section>
+<h2>Créer un critique </h2>
+<section class="form">
+    {% if form.errors %}
+        {{ form.errors }}
+    {% endif %}
+    <form method="post" enctype=multipart/form-data>
+        {% csrf_token %}
+        {{ ticket_form.as_p }}
+        {{ review_form.as_p }}
+        <button type="submit" >Soumettre</button>
+    </form>
+</section>
 {% endblock content %}

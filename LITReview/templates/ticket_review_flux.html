@@ -1,14 +1,14 @@
 <div class="container">
-<div class="jumbotron bg-transparent">
-    <div class="ticket m-auto">
-        <p> {{ item.ticket.user }} a demandé une critique <br>
-        {{ item.ticket.title }} <br>
-        {{ item.ticket.description }}
-            {% if item.ticket.image %}
-                <img src="{{ item.ticket.image.url }}">
-            {% endif %}</p>
-        <p>{{ item.time_created }}
-        </p>
+    <div class="jumbotron bg-transparent">
+        <div class="ticket m-auto">
+            <p> {{ item.ticket.user }} a demandé une critique <br>
+                {{ item.ticket.title }} <br>
+                {{ item.ticket.description }}
+                {% if item.ticket.image %}
+                    <img src="{{ item.ticket.image.url }}">
+                {% endif %}
+            </p>
+            <p> {{ item.time_created }} </p>
+        </div>
     </div>
-</div>
 </div>
