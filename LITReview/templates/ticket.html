@@ -9,9 +9,9 @@
                 {% endif %}</p>
                 <p>
             {% if item.user == request.user %}
-                <button><a class="nav-link" href="{% url 'edit-ticket' item.id %}">Modifier mon ticket</a></button>
+                <button><a class="nav-link" href="{% url 'edit-ticket' item.id %}">Modifier ma demande</a></button>
                 <button class="delete_post"
-                ><a class="nav-link" href="{% url 'delete-ticket' item.id %}">Supprimer mon ticket</a></button>
+                ><a class="nav-link" href="{% url 'delete-ticket' item.id %}">Supprimer ma demande</a></button>
             {% endif %}
             </p>
         </div>

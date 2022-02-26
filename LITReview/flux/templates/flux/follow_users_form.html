@@ -11,13 +11,11 @@
     <br>
     <div class="container">
         <h2>Abonnements</h2>
-
         {% if following|length == 0 %}
             <br>
             <h1>{{ message }}</h1>
             <br>
         {% endif %}
-
         {% for user in following %}
         <li>{{ user.followed_user.username }} :</li>
         <div class="following">
@@ -27,14 +25,11 @@
         </div>
         {% endfor %}
         <h2>Abonnés</h2>
-
         {% if followed_by|length == 0 %}
             <br>
             <h1>{{ message }}</h1>
             <br>
         {% endif %}
-
-
         <div class="follower">
             {% for user in followed_by %}
                 <li>{{user.user.username}}</li>

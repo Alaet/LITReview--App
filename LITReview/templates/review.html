@@ -36,9 +36,9 @@
 
     </div>
         <div class="review__creation"><p> {{ item.time_created }} </p>
-        <button><a class="nav-link" href="{% url 'edit-review' item.id %}">Modifier ma review</a></button>
+        <button><a class="nav-link" href="{% url 'edit-review' item.id %}">Modifier ma critique</a></button>
         <button class="delete_post"><a class="nav-link" href="{% url 'delete-review' item.id %}">Supprimer ma
-            review</a></button>
+            critique</a></button>
         </div>
         <div class="container w-auto">{% include 'ticket_from_review.html' %}</div>
 </div>

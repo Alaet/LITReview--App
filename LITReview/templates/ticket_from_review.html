@@ -9,9 +9,9 @@
             {% endif %}</p>
             <p>{{ item.time_created }}
         {% if item.ticket.user == request.user %}
-            <button><a class="nav-link" href="{% url 'edit-ticket' item.ticket.id %}">Modifier mon ticket</a></button>
+            <button><a class="nav-link" href="{% url 'edit-ticket' item.ticket.id %}">Modifier ma demande</a></button>
             <button class="delete_post"
-            ><a class="nav-link" href="{% url 'delete-ticket' item.ticket.id %}">Supprimer mon ticket</a></button>
+            ><a class="nav-link" href="{% url 'delete-ticket' item.ticket.id %}">Supprimer ma demande</a></button>
         {% endif %}
         </p>
     </div>
