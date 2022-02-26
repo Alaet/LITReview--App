@@ -22,11 +22,14 @@ def home(request):
     user_review = []
     user_ticket_unrated = []
     for item in reviews:
-        if item.user == request.user:
+        if item.user == request.user or item.ticket.user == request.user:
             user_review.append(item)
         for user in following:
-            if item.user == user.followed_user:
-                user_review.append(item)
+            if item.user == user.followed_user or item.ticket.user == user.followed_user:
+                if item in user_review:
+                    pass
+                else:
+                    user_review.append(item)
     for item in tickets:
         if item.user == request.user:
             if not item.rated:
@@ -203,10 +206,15 @@ def user_follow(request):
                     ...
         except ObjectDoesNotExist:
             ...
+    if len(following) == 0 or len(followed_by) == 0:
+        message = "On dirait qu'il n'y a personne ..."
+    else:
+        message = None
     context = {
         "following": following,
         "followed_by": followed_by,
-        "form": user_form
+        "form": user_form,
+        "message": message
     }
     return render(
         request,
