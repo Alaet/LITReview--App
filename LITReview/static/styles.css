@@ -125,11 +125,6 @@ p > #id_content {
 }
 
 .review .ticket {
-  margin-right: 15px;
-  margin-left: 0.5%;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
   width: 100%;
 }
 
@@ -189,9 +184,9 @@ p > #id_content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #6EBF8B;
   width: 80%;
 }
@@ -270,13 +265,7 @@ p > #id_content {
           justify-content: space-evenly;
 }
 
-#flux_home__button > button {
-  margin-top: 15px;
-  font-size: 18px;
-  padding: 16px 32px;
-}
-
-#home_nav_bar {
+#flux_home__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,24 +276,15 @@ p > #id_content {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-#home_nav_bar nav {
-  position: relative;
-  margin-left: auto;
-  padding-right: 55px;
-}
-
-#home_nav_bar a {
-  padding-left: 55px;
-  width: 100%;
-}
-
-#home_nav_bar a:link {
-  color: red;
+#flux_home__button > button {
+  margin-top: 15px;
+  font-size: 18px;
+  padding: 16px 32px;
 }
 
 .post {
@@ -591,7 +571,7 @@ p > #id_content {
           box-sizing: border-box;
 }
 
-.follow {
+.following {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -599,29 +579,12 @@ p > #id_content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-}
-
-.follow .following, .follow .follower {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
