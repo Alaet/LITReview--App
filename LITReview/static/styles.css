@@ -36,25 +36,7 @@ p > #id_content {
   width: 75%;
 }
 
-.user_posts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: none;
-      -ms-flex-pack: none;
-          justify-content: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.user_posts__posted_ticket, .user_posts__posted_review {
+.posted_ticket, .posted_review {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

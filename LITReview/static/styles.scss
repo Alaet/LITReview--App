@@ -56,13 +56,11 @@ p > #id_content{
     width: 75%;
 }
 
-.user_posts {
-    @include flex(flex, row, center, none);
-    flex-wrap: wrap;
-    &__posted_ticket, &__posted_review {
-        @include flex(flex, column-reverse, center, none);
-    }
+
+.posted_ticket, .posted_review {
+    @include flex(flex, column-reverse, center, none);
 }
+
 
 .review {
     @include flex(flex, row, none, space-between);
