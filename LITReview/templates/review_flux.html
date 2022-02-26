@@ -1,4 +1,6 @@
-<div class="review">
+<div class="container">
+<div class="jumbotron bg-transparent">
+<div class="review m-auto">
     <div>
         <p> {{ item.user }} a publié une critique <br><br>
          {{ item.headline }} -
@@ -31,5 +33,7 @@
             {% endif %}
             <br><br> {{ item.body }} </p></div>
         <div class="review__creation"><p> {{ item.time_created }} </p></div>
-        {% include 'ticket_review_flux.html' %}
+       <div class="container w-auto">{% include 'ticket_review_flux.html' %}</div>
+</div>
+</div>
 </div>

@@ -1,14 +1,19 @@
-<div class="ticket">
-    <p> {{ item.ticket.user }} a demandé une critique <br>
-    {{ item.ticket.title }} <br>
-    {{ item.ticket.description }}
-        {% if item.ticket.image %}
-            <img src="{{ item.ticket.image.url }}">
+<div class="container">
+<div class="jumbotron bg-transparent">
+    <div class="ticket m-auto">
+        <p> {{ item.ticket.user }} a demandé une critique <br>
+        {{ item.ticket.title }} <br>
+        {{ item.ticket.description }}
+            {% if item.ticket.image %}
+                <img src="{{ item.ticket.image.url }}">
+            {% endif %}</p>
+            <p>{{ item.time_created }}
+        {% if item.ticket.user == request.user %}
+            <button><a class="nav-link" href="{% url 'edit-ticket' item.ticket.id %}">Modifier mon ticket</a></button>
+            <button class="delete_post"
+            ><a class="nav-link" href="{% url 'delete-ticket' item.ticket.id %}">Supprimer mon ticket</a></button>
         {% endif %}
-    {% if item.ticket.user == request.user %}
-        <button><a href="{% url 'edit-ticket' item.ticket.id %}">Modifier mon ticket</a></button>
-        <button class="delete_post"
-        ><a href="{% url 'delete-ticket' item.ticket.id %}">Supprimer mon ticket</a></button>
-    {% endif %}
-    </p>
+        </p>
+    </div>
+</div>
 </div>

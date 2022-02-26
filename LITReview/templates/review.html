@@ -1,4 +1,6 @@
-<div class="review">
+<div class="container">
+<div class="jumbotron bg-transparent">
+<div class="review m-auto">
     <div>
         <p> {{ item.user }} a publié une critique <br><br>
          {{ item.headline }} -
@@ -28,11 +30,17 @@
                 <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                 <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                 <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-            {% endif %}
-            <br><br> <p>{{ item.body }}</p> </p></div>
+            {% endif %}</p>
+            <br><br>
+        <p>{{ item.body }}</p>
+
+    </div>
         <div class="review__creation"><p> {{ item.time_created }} </p>
-        <button><a href="{% url 'edit-review' item.id %}">Modifier ma review</a></button>
-        <button class="delete_post"><a href="{% url 'delete-review' item.id %}">Supprimer ma review</a></button>
+        <button><a class="nav-link" href="{% url 'edit-review' item.id %}">Modifier ma review</a></button>
+        <button class="delete_post"><a class="nav-link" href="{% url 'delete-review' item.id %}">Supprimer ma
+            review</a></button>
         </div>
-        {% include 'ticket_from_review.html' %}
+        <div class="container w-auto">{% include 'ticket_from_review.html' %}</div>
+</div>
+</div>
 </div>

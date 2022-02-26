@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="user_posts">
+<div class="container m-auto">
     {% if user_posts|length > 0 %}
     <div class="user_posts__posted_review">
         {% for item in user_posts %}
@@ -8,7 +8,8 @@
         {% endfor %}
         <h2>Vos critiques</h2>
     </div>
-    {% elif user_tickets|length > 0 %}
+    {% endif %}
+    {% if user_tickets|length > 0 %}
     <div class="user_posts__posted_ticket">
         {% for item in user_tickets %}
             {% if not item.rated %}

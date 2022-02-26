@@ -9,23 +9,21 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
 </head>
 <body>
+<div class="bg-dark">
     <h1>LITReview</h1>
-    <div id="home_nav_bar">
+    {% if user.is_authenticated %}
+        <nav class="navbar navbar-expand-lg navbar-dark">
 
-
-        {% if user.is_authenticated %}
-        <nav>
-                <ul>
-                    <a href="{% url 'home' %}">Flux</a>
-                    <a href="{% url 'my-posts' %}">Posts</a>
-                    <a href="{% url 'follow-users' %}">Abonnements</a>
-                    <a href="{% url 'logout' %}">Se deconnecter</a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Flux</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'my-posts' %}">Posts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'follow-users' %}">Abonnements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Se deconnecter</a></li>
                 </ul>
         </nav>
-        {% endif %}
+    {% endif %}
     </div>
-    <hr>
-    <div class="container">
+    <div class="container my-5">
     {% block content %}{% endblock content %}
     </div>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
