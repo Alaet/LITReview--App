@@ -1,15 +1,17 @@
 <div class="container">
     <div class="jumbotron bg-transparent">
         <div class="ticket m-auto">
-            <p> {{ item.ticket.user }} a demandé une critique <br>
-                {{ item.ticket.titre }} <br>
-                {{ item.ticket.description }}
-                {% if item.ticket.image %}
-                    <img src="{{ item.ticket.image.url }}">
-                {% endif %}
-            </p>
-            <p>{{ item.time_created }}
-                {% if item.ticket.user == request.user %}
+            <div class="review__creation p-2">
+                <p>{{ item.time_created }} </p>
+                <p> {{ item.ticket.user }} a demandé une critique <br>
+                    {{ item.ticket.titre }} <br>
+                    {{ item.ticket.description }}
+                    {% if item.ticket.image %}
+                        <img src="{{ item.ticket.image.url }}">
+                    {% endif %}
+                </p>
+
+                <p> {% if item.ticket.user == request.user %}
                     <button>
                         <a class="nav-link" href="{% url 'edit-ticket' item.ticket.id %}">Modifier ma demande</a>
                     </button>
@@ -17,7 +19,8 @@
                         <a class="nav-link" href="{% url 'delete-ticket' item.ticket.id %}">Supprimer ma demande</a>
                     </button>
                 {% endif %}
-            </p>
+                </p>
+            </div>
         </div>
     </div>
 </div>

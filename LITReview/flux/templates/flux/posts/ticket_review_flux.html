@@ -1,6 +1,8 @@
 <div class="container">
     <div class="jumbotron bg-transparent">
         <div class="ticket m-auto">
+            <div class="review__creation p-2">
+            <p> {{ item.time_created }} </p>
             <p> {{ item.ticket.user }} a demandé une critique <br>
                 {{ item.ticket.titre }} <br>
                 {{ item.ticket.description }}
@@ -8,7 +10,7 @@
                     <img src="{{ item.ticket.image.url }}">
                 {% endif %}
             </p>
-            <p> {{ item.time_created }} </p>
+        </div>
         </div>
     </div>
 </div>

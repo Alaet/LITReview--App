@@ -1,7 +1,8 @@
 <div class="container">
     <div class="jumbotron bg-transparent">
         <div class="review m-auto">
-            <div>
+            <div class="review__creation p-2">
+                <p> {{ item.time_created }} </p>
                 <p> {{ item.user }} a publié une critique <br><br>
                  {{ item.accroche }} -
                     {% if item.note == 0 %}
@@ -33,9 +34,6 @@
                     {% endif %}</p>
                     <br><br>
                 <p>{{ item.critique }}</p>
-            </div>
-            <div class="review__creation">
-                <p> {{ item.time_created }} </p>
                 <button>
                     <a class="nav-link" href="{% url 'edit-review' item.id %}">Modifier ma critique</a>
                 </button>
