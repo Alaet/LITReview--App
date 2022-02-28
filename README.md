@@ -44,9 +44,9 @@ Une fois l'appliction télécharger, pour mettre en place :
 
 6. Utilisateurs déjà créés dans la base du projet:
    * Nom: `Nelly` Password: `Maux2pass`
-   * Nom: `` Password: ``
-   * Nom: `` Password: ``
-   * Nom: `` Password: ``
+   * Nom: `Abdul` Password: `Maux2pass`
+   * Nom: `Yves` Password: `Maux2pass`
+   * Nom: `Hackim` Password: `Maux2pass`
 
 
 7. Administrateur créé:
