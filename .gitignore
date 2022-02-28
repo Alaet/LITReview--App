@@ -127,3 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+./LITReview/flake8-html/
