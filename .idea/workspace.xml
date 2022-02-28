@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1b4d1592-3615-4be9-9d07-ff4369bf6023" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket_from_review.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket_from_review.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket_review_flux.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket_review_flux.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
