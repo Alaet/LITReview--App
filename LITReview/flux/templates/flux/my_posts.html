@@ -8,8 +8,7 @@
             {% endfor %}
             <h2>Vos critiques</h2>
         </div>
-    {% endif %}
-    {% if user_tickets|length > 0 %}
+    {% elif user_tickets|length > 0 %}
         <div class="posted_ticket">
             {% for item in user_tickets %}
                 {% if not item.rated %}
