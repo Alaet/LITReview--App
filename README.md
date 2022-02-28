@@ -2,19 +2,17 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 
-# P9_oliva_maximilien
+# LITReview
 
 Application qui permet de demander ou de publier des critiques de livres ou d'articles.
 
 ## Démarrage
 
-1. A partir de votre terminal, se mettre au niveau du répertoire "P9".
+1. A partir de votre terminal, se mettre au niveau du répertoire "LITReview".
 2. Créer un environnement virtuel avec la commande :
-   `python3 -m venv env` ou `py -m venv env`
+   `python3 -m venv venv` ou `py -m venv venv`
 3. Démarrer l'environnement virtuel avec les commandes:
-   * pour mac: `source venv/bin/activate`
-   * pour win: `env\Scripts\activate.bat`
-   * Pour Git Bash: `source env/Scripts/activate`</span>
+   * pour win: `venv\Scripts\activate.bat`
 4. Lancer l'installation des bibliothèques nécessaires à partir du fichier "requirements.txt" avec la commande: 
    `pip install -r requirements.txt`
 5. Lancer le serveur Django:
@@ -25,3 +23,4 @@ Application qui permet de demander ou de publier des critiques de livres ou d'ar
    * Nom: `` Password: ``
    * Nom: `` Password: ``
 7. Administrateur créé:
+   * Nom: `admin` Password: `admin`
