@@ -1,6 +1,10 @@
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
+
 # P9_oliva_maximilien
 
-<span style="color:#696969">Application qui permet de demander ou de publier des critiques de livres ou d'articles.
+Application qui permet de demander ou de publier des critiques de livres ou d'articles.
 
 ## Démarrage
 
