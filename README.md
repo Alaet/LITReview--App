@@ -30,15 +30,23 @@ Une fois l'appliction télécharger, pour mettre en place :
 
 
 5. Lancer le serveur Django:
+   - Pour initialiser une base de donnée :
+   
+   
+      `python3 manage.py makemigrations`
+      `python3 manage.py migrate` 
 
-   `py manage.py runserver` ou `python3 manage.py runserver` 
+   - Avec la base disponible :
+   
+      
+      `py manage.py runserver` ou `python3 manage.py runserver` 
 
 
-6. Utilisateurs déjà créés:
-   * Nom: `` Password: ``
-   * Nom: `` Password: ``
-   * Nom: `` Password: ``
-   * Nom: `` Password: ``
+6. Utilisateurs déjà créés dans la base du projet:
+   * Nom: `Nelly` Password: `Maux2pass`
+   * Nom: `Abdul` Password: `Maux2pass`
+   * Nom: `Yves` Password: `Maux2pass`
+   * Nom: `Hackim` Password: `Maux2pass`
 
 
 7. Administrateur créé:

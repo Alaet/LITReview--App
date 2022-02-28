@@ -68,20 +68,16 @@ p > #id_content{
     background-color: #D82148;
     flex-wrap: wrap;
     width: 80%;
-    p {
-        word-break: break-all;
-        white-space: normal;
-    }
     > div {
-        width: 50%;
+        width: 100%;
         display: flex;
-        flex-wrap: wrap;
+
     }
     &__creation {
         @include flex(flex, column, flex-end, space-between);
         flex-wrap: wrap;
         height: auto;
-        width: 20%;
+        width: 100%;
     }
     .ticket {
         width: 100%;
