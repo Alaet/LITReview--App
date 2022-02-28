@@ -10,7 +10,6 @@
                         <img src="{{ item.ticket.image.url }}">
                     {% endif %}
                 </p>
-
                 <p> {% if item.ticket.user == request.user %}
                     <button>
                         <a class="nav-link" href="{% url 'edit-ticket' item.ticket.id %}">Modifier ma demande</a>
