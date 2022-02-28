@@ -4,7 +4,15 @@
     <list default="true" id="1b4d1592-3615-4be9-9d07-ff4369bf6023" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LITReview/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/my_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/my_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/review.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/review_flux.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/review_flux.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket_from_review.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket_from_review.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket_review_flux.html" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/flux/templates/flux/posts/ticket_review_flux.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/static/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/static/styles.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LITReview/static/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/LITReview/static/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
