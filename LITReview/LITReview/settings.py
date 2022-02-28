@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'guardian',
     'authentication',
     'flux',
 ]
@@ -67,7 +66,7 @@ ROOT_URLCONF = 'LITReview.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR.joinpath('templates'), ],
+        'DIRS': [BASE_DIR.joinpath('templates'), BASE_DIR.joinpath('flux/templates/flux/posts')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

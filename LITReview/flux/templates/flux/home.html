@@ -20,7 +20,8 @@
         {% endif %}
     {% endfor %}
     {% else %}
-        <h1><strong>Oups .. vous n'avez encore rien publié,<br> OU ne suivez aucun utilisateur,<br> abonnez-vous à
+        <h1><strong>Oups .. vous n'avez encore rien publié,<br> OU ne suivez aucun utilisateur,<br>
+            <a class="nav-link" href="{% url 'follow-users' %}">abonnez-vous</a> à
             quelqu'un pour suivre son activité !</strong></h1>
     {% endif %}
 </div>

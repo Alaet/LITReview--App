@@ -1,15 +1,14 @@
 <div class="container">
     <div class="jumbotron bg-transparent">
-        <div class="ticket_unrated m-auto">
-            <p> {{ item.user }} a demandé une critique <br>
-                {{ item.title }} <br>
+        <div class="ticket m-auto">
+            <p> {{ item.time_created }} {{ item.user }} a demandé une critique <br>
+                {{ item.titre }} <br>
                 {{ item.description }}
                 {% if item.image %}
                     <img src="{{ item.image.url }}">
                 {% endif %}
             </p>
-            <p>{{ item.time_created }}
-                {% if item.user == request.user %}
+            <p> {% if item.user == request.user %}
                     <button>
                         <a class="nav-link" href="{% url 'edit-ticket' item.id %}">Modifier ma demande</a>
                     </button>
@@ -17,9 +16,6 @@
                         <a class="nav-link" href="{% url 'delete-ticket' item.id %}">Supprimer ma demande</a>
                     </button>
                 {% endif %}
-                <button class="create_post">
-                    <a class="nav-link" href="{% url 'post-ticket-review' item.id %}">Créer une critique</a>
-                </button>
             </p>
         </div>
     </div>

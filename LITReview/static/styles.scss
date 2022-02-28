@@ -123,6 +123,10 @@ p > #id_content{
     @include flex(flex, row, center, none);
 }
 
+#id_note {
+    @include flex(flex, row, center, center);
+}
+
 #flux_home {
     @include flex(flex, column, center, space-evenly);
     &__button {

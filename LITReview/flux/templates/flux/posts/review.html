@@ -3,8 +3,8 @@
         <div class="review m-auto">
             <div>
                 <p> {{ item.user }} a publié une critique <br><br>
-                 {{ item.headline }} -
-                    {% if item.rating == 0 %}
+                 {{ item.accroche }} -
+                    {% if item.note == 0 %}
                         <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
                         <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
                         <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
@@ -30,14 +30,21 @@
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                    {% endif %}
-                    <br><br> {{ item.body }} </p>
+                    {% endif %}</p>
+                    <br><br>
+                <p>{{ item.critique }}</p>
             </div>
             <div class="review__creation">
                 <p> {{ item.time_created }} </p>
+                <button>
+                    <a class="nav-link" href="{% url 'edit-review' item.id %}">Modifier ma critique</a>
+                </button>
+                <button class="delete_post">
+                    <a class="nav-link" href="{% url 'delete-review' item.id %}">Supprimer ma critique</a>
+                </button>
             </div>
             <div class="container w-auto">
-                {% include 'ticket_review_flux.html' %}
+                {% include 'ticket_from_review.html' %}
             </div>
         </div>
     </div>

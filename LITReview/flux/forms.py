@@ -13,11 +13,11 @@ class ReviewForm(forms.ModelForm):
         ('5', '5 ⭐'),
     ]
     edit_review = forms.BooleanField(widget=forms.HiddenInput, initial=True)
-    rating = forms.ChoiceField(widget=forms.RadioSelect, choices=STARS)
+    note = forms.ChoiceField(widget=forms.RadioSelect, choices=STARS)
 
     class Meta:
         model = models.Review
-        fields = ['headline', 'rating', 'body']
+        fields = ['accroche', 'note', 'critique']
 
 
 class DeleteReviewForm(forms.Form):
@@ -29,7 +29,7 @@ class TicketForm(forms.ModelForm):
 
     class Meta:
         model = models.Ticket
-        fields = ['title', 'description', 'image']
+        fields = ['titre', 'description', 'image']
 
 
 class DeleteTicketForm(forms.Form):
