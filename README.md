@@ -4,16 +4,17 @@
 
 # LITReview
 
-Application qui permet de demander ou de publier des critiques de livres ou d'articles.
+Application qui permet de demander/publier des critiques de livres/d'articles,
+y associer une note, et la possibilité de suivre et être suivis par les autres utilisateurs.
 
 ## Démarrage
 
 1. A partir de votre terminal, se mettre au niveau du répertoire "LITReview".
-2. Créer un environnement virtuel avec la commande :
+2. Créer un environnement virtuel avec la commande:
    `python3 -m venv venv` ou `py -m venv venv`
-3. Démarrer l'environnement virtuel avec les commandes:
-   * pour win: `venv\Scripts\activate.bat`
-4. Lancer l'installation des bibliothèques nécessaires à partir du fichier "requirements.txt" avec la commande: 
+3. Activer l'environnement virtuel:
+   * pour win: `venv\Scripts\activate`
+4. Installer les bibliothèques nécessaires: 
    `pip install -r requirements.txt`
 5. Lancer le serveur Django:
 `py manage.py runserver` ou `python manage.py runserver` 
