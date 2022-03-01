@@ -5,7 +5,7 @@
     {% if form.errors %}
         {{ form.errors }}
     {% endif %}
-    {% include "ticket.html" %}
+    {% include "ticket_unrated.html" %}
     <form method="post" enctype=multipart/form-data>
         {% csrf_token %}
         {{ review_form.as_p }}
