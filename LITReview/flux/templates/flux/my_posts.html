@@ -8,7 +8,10 @@
             {% endfor %}
             <h2>Vos critiques</h2>
         </div>
-    {% elif user_tickets|length > 0 %}
+    {% else %}
+        <h1><strong>Oups .. vous n'avez encore rien publié !</strong></h1>
+    {% endif %}
+    {% if user_tickets|length > 0 %}
         <div class="posted_ticket">
             {% for item in user_tickets %}
                 {% if not item.rated %}
@@ -20,7 +23,7 @@
             <h2>Vos demandes de critiques</h2>
         </div>
     {% else %}
-        <h1><strong>Oups .. vous n'avez encore rien publié !</strong></h1>
+        <h1><strong>Oups .. vous n'avez encore demandé aucune critique !</strong></h1>
     {% endif %}
 </div>
 {% endblock content %}
