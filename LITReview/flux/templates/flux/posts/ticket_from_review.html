@@ -2,7 +2,7 @@
     <div class="jumbotron bg-transparent">
         <div class="ticket m-auto">
             <div class="review__creation p-2">
-                <p>{{ item.time_created }} </p>
+                <p> {{ item.time_created }} </p>
                 <p> {{ item.ticket.user }} a demandé une critique <br>
                     {{ item.ticket.titre }} <br>
                     {{ item.ticket.description }}
@@ -11,13 +11,13 @@
                     {% endif %}
                 </p>
                 <p> {% if item.ticket.user == request.user %}
-                    <button>
-                        <a class="nav-link" href="{% url 'edit-ticket' item.ticket.id %}">Modifier ma demande</a>
-                    </button>
-                    <button class="delete_post">
-                        <a class="nav-link" href="{% url 'delete-ticket' item.ticket.id %}">Supprimer ma demande</a>
-                    </button>
-                {% endif %}
+                        <button>
+                            <a class="nav-link" href="{% url 'edit-ticket' item.ticket.id %}">Modifier ma demande</a>
+                        </button>
+                        <button class="delete_post">
+                            <a class="nav-link" href="{% url 'delete-ticket' item.ticket.id %}">Supprimer ma demande</a>
+                        </button>
+                    {% endif %}
                 </p>
             </div>
         </div>

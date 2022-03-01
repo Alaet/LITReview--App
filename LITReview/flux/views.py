@@ -102,7 +102,7 @@ def post_ticket_review(request, ticket_id):
             return redirect('home')
     context = {
         'review_form': review_form,
-        'ticket': ticket
+        'item': ticket
     }
     return render(request, 'flux/post_ticket_review.html', context=context)
 

@@ -3,37 +3,37 @@
         <div class="review m-auto">
             <div class="review__creation p-2">
                 <p> {{ item.time_created }} </p>
-                <p> {{ item.user }} a publié une critique  <br><br>
-                 {{ item.accroche }} -
+                <p> {{ item.user }} a publié une critique <br><br>
+                    {{ item.accroche }} -
                     {% if item.note == 0 %}
                         <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
                         <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
                         <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
                         <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
                         <span style="font-size:150%;color:rgb(0, 0, 0);">&#x2606;</span>
-                    {% elif item.rating == 1  %}
+                    {% elif item.note == 1  %}
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&#x2605;</span>
-                    {% elif item.rating == 2  %}
+                    {% elif item.note == 2  %}
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                    {% elif item.rating == 3  %}
-                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                    {% elif item.rating == 4  %}
+                    {% elif item.note == 3  %}
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                    {% elif item.note == 4  %}
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
-                    {% elif item.rating == 5  %}
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                        <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
+                    {% elif item.note == 5  %}
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                         <span style="font-size:150%;color:rgb(255, 230, 0);">&starf;</span>
                     {% endif %}
-                    <br><br> {{ item.critique }} </p>
-
+                    <br><br> {{ item.critique }} 
+                </p>
             </div>
             <div class="container w-auto">
                 {% include 'ticket_review_flux.html' %}

@@ -7,16 +7,12 @@
   margin-bottom: 25px;
 }
 
-.review button, .ticket_unrated button, .ticket button {
-  background-color: greenyellow;
-}
-
 .review .delete_post, .ticket_unrated .delete_post, .ticket .delete_post {
-  background-color: rgba(255, 0, 0, 0.616);
+  background-color: red;
 }
 
 body {
-  background: #FDEFF4;
+  background: #f37724;
   color: black;
   height: 50%;
 }
@@ -66,7 +62,7 @@ p > #id_content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #D82148;
+  background-color: #21d873;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 80%;
@@ -117,7 +113,7 @@ p > #id_content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #6EBF8B;
+  background-color: #6ebfb1;
   width: 80%;
 }
 
@@ -162,7 +158,7 @@ p > #id_content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #6EBF8B;
+  background-color: #6ebfb1;
   width: 80%;
 }
 

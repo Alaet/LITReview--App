@@ -5,20 +5,11 @@
     {% if form.errors %}
         {{ form.errors }}
     {% endif %}
-    <div class="ticket">
-        <p> Demandé par {{ ticket.user }} <br>
-            {{ ticket.title }} <br>
-            {% if ticket.image %}
-                <img src="{{ ticket.image.url }}">
-            {% endif %}
-         </p>
-        <p>{{ ticket.time_created }}</p>
-    </div>
+    {% include "ticket_unrated.html" %}
     <form method="post" enctype=multipart/form-data>
         {% csrf_token %}
         {{ review_form.as_p }}
         <button type="submit" >Soumettre</button>
     </form>
 </section>
-<a class="nav-link" href="{% url 'home' %}">Page d'acceuil</a>
 {% endblock content %}
