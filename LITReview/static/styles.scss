@@ -15,7 +15,7 @@
 }
 
 @mixin base_ticket {
-    background-color: #6EBF8B;
+    background-color: #6ebfb1;
     @extend %posts_box;
     img {
         max-width: 20%;
@@ -29,16 +29,13 @@
     box-shadow: 5px 5px 5px 5px black;
     margin-top: 25px;
     margin-bottom: 25px;
-    button {
-        background-color: greenyellow;
-    }
     .delete_post {
-        background-color: rgba(255, 0, 0, 0.616);
+        background-color: rgb(255, 0, 0);
     }
 }
 
 body {
-    background: #FDEFF4;
+    background: #f37724;
     color: black;
     height: 50%;
 }
@@ -65,7 +62,7 @@ p > #id_content{
 .review {
     @include flex(flex, row, none, space-between);
     @extend %posts_box;
-    background-color: #D82148;
+    background-color: #21d873;
     flex-wrap: wrap;
     width: 80%;
     > div {
